@@ -1,6 +1,20 @@
 {
   "name": "MyZoo",
   "tree": {
-    "$className": "DataModel"
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$path": "src/shared"
+    },
+
+    "ServerScriptService": {
+      "Game": { "$path": "src/server" }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": { "$path": "src/client" }
+      }
+    }
   }
 }
