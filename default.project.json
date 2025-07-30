@@ -1,0 +1,6 @@
+{
+  "name": "MyZoo",
+  "tree": {
+    "$className": "DataModel"
+  }
+}
