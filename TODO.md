@@ -48,6 +48,7 @@
 - [ ] Pricing controls for tickets and shops
 
 ## 6. Research & Unlocks
+
 - [ ] Design research tree and unlockable content
 - [ ] Implement research points generation and spending
 - [ ] Unlock new animals, buildings, decorations, and staff abilities
@@ -59,6 +60,7 @@
 ---
 
 # Optional / Future Enhancements
+
 - Multiplayer support for cooperative zoo building
 - Event system: festivals, animal shows, emergencies
 - Customizable zoo branding and themes
