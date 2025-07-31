@@ -8,4 +8,3 @@ realm = "shared"
 
 [server-dependencies]
 ProfileService = "firebird702/profileservice@1.1.0"
-Cmdr = "evaera/cmdr@1.12.0"

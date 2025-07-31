@@ -5,12 +5,7 @@ registry = "test"
 [[package]]
 name = "devbyeagle/myzoo"
 version = "0.1.0"
-dependencies = [["Cmdr", "evaera/cmdr@1.12.0"], ["ProfileService", "firebird702/profileservice@1.1.0"]]
-
-[[package]]
-name = "evaera/cmdr"
-version = "1.12.0"
-dependencies = []
+dependencies = [["ProfileService", "firebird702/profileservice@1.1.0"]]
 
 [[package]]
 name = "firebird702/profileservice"
