@@ -4,23 +4,25 @@
     "$className": "DataModel",
 
     "ReplicatedStorage": {
+      "$ignoreUnknownInstances": true,
       "$path": "src/shared",
-      "$ignoreUnknownInstances": true
+      "Remotes": {
+        "$className": "Folder",
+        "PlaceItem": {
+          "$className": "RemoteEvent"
+        }
+      }
     },
 
     "ServerScriptService": {
-      "Game": { "$path": "src/server" }
+      "$path": "src/server",
+      "Packages": { "$path": "ServerPackages" }
     },
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
+        "$ignoreUnknownInstances": true,
         "Client": { "$path": "src/client" }
-      }
-    },
-
-    "Workspace": {
-      "Plots": {
-        "$className": "Folder"
       }
     }
   }
