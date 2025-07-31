@@ -19,6 +19,10 @@ local function CreateLeaderstats(player: Player)
     local money = Instance.new('IntValue', leaderstats)
     money.Name = 'Money'
     money.Value = profile.Data.Money
+
+    local gems = Instance.new('IntValue', leaderstats)
+    gems.Name = 'Gems'
+    gems.Value = profile.Data.Gems
 end
 
 local function LoadProfile(player: Player)

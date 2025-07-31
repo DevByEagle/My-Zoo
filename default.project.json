@@ -8,9 +8,7 @@
       "$path": "src/shared",
       "Remotes": {
         "$className": "Folder",
-        "PlaceItem": {
-          "$className": "RemoteEvent"
-        }
+        "GetData": { "$className": "RemoteFunction" }
       }
     },
 
