@@ -8,7 +8,8 @@
       "$path": "src/shared",
       "Remotes": {
         "$className": "Folder",
-        "GetData": { "$className": "RemoteFunction" }
+        "GetData": { "$className": "RemoteFunction" },
+        "UpdateMoney": { "$className": "RemoteEvent" }
       }
     },
 

@@ -52,6 +52,7 @@ for _, player in Players:GetPlayers() do
 end
 
 Players.PlayerAdded:Connect(LoadProfile)
+
 Players.PlayerRemoving:Connect(function(player)
     local profile = Manager.Profiles[player]
     if profile then

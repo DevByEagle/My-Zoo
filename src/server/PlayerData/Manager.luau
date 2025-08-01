@@ -6,12 +6,12 @@ local Manager = {}
 
 Manager.Profiles = {}
 
-local function GetData(player: Player, directory: string)
-    local profile = Manager.Profiles[player]
-    if not profile then return end
-    return profile.Data[directory]
+function Manager.AdjustMoney(player: Player, amount: number)
+	local profile = Manager.Profiles[player]
+	if not profile then warn("NO PROFILE") end
+	profile.Data.Money += amount
+	player.leaderstats.Money.Value = profile.Data.Money
+	Remotes.UpdateMoney:FireClient(player, profile.Data.Money)
 end
-
-Remotes.GetData.OnServerInvoke = GetData
 
 return Manager
