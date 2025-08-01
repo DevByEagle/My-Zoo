@@ -9,7 +9,8 @@
       "Remotes": {
         "$className": "Folder",
         "GetData": { "$className": "RemoteFunction" },
-        "UpdateMoney": { "$className": "RemoteEvent" }
+        "UpdateMoney": { "$className": "RemoteEvent" },
+        "EarnMoney": { "$className": "RemoteEvent" }
       }
     },
 

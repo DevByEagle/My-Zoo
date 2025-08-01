@@ -21,9 +21,9 @@
 
 ## 3. Visitor System
 
-- [ ] Design visitor NPC AI and pathfinding
+- [x] Design visitor NPC AI and pathfinding
 - [ ] Implement visitor needs: food, entertainment, restrooms
-- [ ] Add visitor spawning and crowd control
+- [x] Add visitor spawning and crowd control
 - [ ] Visitor spending behavior (shops, tickets, donations)
 - [ ] Visitor happiness and feedback system
 - [ ] Special visitor events (groups, VIPs, etc.)
