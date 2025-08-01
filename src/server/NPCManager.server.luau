@@ -1,29 +1,41 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local workspace = game:GetService("Workspace")
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+local Workspace = game:GetService('Workspace')
 
 local AIService = require(ReplicatedStorage.Modules.AIService)
 local Roam = require(ReplicatedStorage.Modules.AIService.Behaviors.Roam)
 
 local NPCTemplatesFolder = ReplicatedStorage:WaitForChild('NPCs')
-local ActiveNPCsFolder = workspace:WaitForChild("Base"):WaitForChild("NPCs")
+local ActiveNPCsFolder = Workspace:WaitForChild('Base'):WaitForChild('NPCs')
+
+local MaxNPC = 1
+
+local function CanSpawn()
+	return #ActiveNPCsFolder:GetChildren() < MaxNPC
+end
 
 local function GetRandomTemplate()
 	local templates = NPCTemplatesFolder:GetChildren()
+	if #templates == 0 then return nil end
 	return templates[math.random(1, #templates)]
 end
 
 local function SpawnNPC()
-    local template = GetRandomTemplate()
-    local npcClone = template:Clone()
+	if not CanSpawn() then return end
 
-    -- Parent to the active NPCs folder
-    npcClone.Parent = ActiveNPCsFolder
-    
-    -- Create the NPC controller and start roaming
-    local npc = AIService.new(npcClone)
-    npc:RunBehavior(Roam)
+	local template = GetRandomTemplate()
+	if not template then return end
+
+	local npcClone = template:Clone()
+	npcClone.Parent = ActiveNPCsFolder
+
+	local npc = AIService.new(npcClone)
+	npc:RunBehavior(Roam)
 end
 
-for i = 1, 5 do
-    SpawnNPC()
+-- Auto-spawn loop
+while true do
+	if CanSpawn() then
+		SpawnNPC()
+	end
+	task.wait(2)
 end
